@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import joblib
 
-# Load the pre-trained models
+
 role_model = joblib.load('role_category_model.pkl')
 func_model = joblib.load('functional_area_model.pkl')
 industry_model = joblib.load('industry_model.pkl')
