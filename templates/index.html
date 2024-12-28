@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Category Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Skill Category Predictor</h1>
+        <form method="POST">
+            <input type="text" name="skills" placeholder="Enter your skills (e.g. Python, ML)" required>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if role %}
+        <div class="result">
+            <h3>Predicted Categories </h3>
+            <p><strong>Role Category:</strong> {{ role }}</p>
+            <p><strong>Functional Area:</strong> {{ func }}</p>
+            <p><strong>Industry:</strong> {{ industry }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
