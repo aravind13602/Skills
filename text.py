@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-file_path = r'C:\Users\aravi\OneDrive\Desktop\testing\naukri.xlsx'
+file_path = r'C:\Users\aravi\Desktop\Skills\naukri.xlsx'
 df = pd.read_excel(file_path)
 
 df = df.dropna(subset=['Key-Skills', 'Role Category', 'Functional Area', 'Industry'])
